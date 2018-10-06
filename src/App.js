@@ -15,7 +15,6 @@ class App extends Component {
     this.getVenues();
   }
 
-
 //Fetch venues from Foursquare
   getVenues = () => {
    let endPoint =  "https://api.foursquare.com/v2/venues/explore?";
@@ -68,7 +67,7 @@ class App extends Component {
 
       // add eventlistener to markers
       marker.addListener("mouseover", () => {
-        this.infowindow(marker, content);
+        this.sideBarInfoWindow (marker, content);
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
         setTimeout(function() {
           marker.setAnimation(null);
@@ -84,9 +83,13 @@ class App extends Component {
       this.setState({ markers });
     };
 
-    infowindow = (marker, content) => {
+    sideBarInfoWindow = (marker, content) => {
       this.state.infowindow.setContent(content);
       this.state.infowindow.open(this.state.map, marker);
+      marker.setAnimation(window.google.maps.Animation.BOUNCE);
+        setTimeout(function() {
+          marker.setAnimation(null);
+        }, 400);
 }
 
 //Load Google Map
@@ -94,7 +97,9 @@ class App extends Component {
     loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyDVuOsPlSlPkEuLQwOEQ2jX47ftQX7eBUE&callback=initMap");
       window.initMap = this.initMap;
         console.log("loading map")
+
   };
+
 
 
 //Search venues
@@ -127,7 +132,7 @@ class App extends Component {
           query={this.state.query}
           markers={this.state.markers}
           updateQuery={this.updateQuery}
-          infowindow={this.infowindow}
+          sideBarInfoWindow={this.sideBarInfoWindow}
         />
       </main>
     );

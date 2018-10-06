@@ -5,7 +5,7 @@ class Sidebar extends Component {
 
 
   handleClick = (id,title) => {
-  this.props.infowindow(this.props.markers[id],title);
+  this.props.sideBarInfoWindow(this.props.markers[id],title);
   console.log("clicking")
 }
 
@@ -27,15 +27,21 @@ class Sidebar extends Component {
           onChange={event => this.props.updateQuery(event.target.value)}
 
         />
-        <ul className="list">
-          {venues.map((item, index) => {
-              return (
-                <li tabIndex="0" className="list-item" key={index} onClick={()=> this.handleClick(index,item.venue.name)} >
-                 {item.venue.name}
-                </li>
-              );
-            })}
-        </ul>
+          <ul className="list">
+            {venues.filter(
+                filtered =>
+                  filtered.venue.name
+                    .toLowerCase()
+                    .indexOf(this.props.query.toLowerCase()) > -1
+              ).map((item, index) => {
+                return (
+                  <li tabIndex="0" className="list-item" key={index}
+                    onClick={()=> this.handleClick(index,item.venue.name)} >
+                      {item.venue.name}
+                  </li>
+                );
+              })}
+          </ul>
         </form>
       </div>
     );
