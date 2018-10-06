@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  order: 1;
+}
+
+.box {
+  height: 50px;
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 80%;
+}
+
+.container {
+  display: flex;
+}
+
+
+.sidebar {
+  background-color: cadetblue;
+  width: 300px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 10px;
+  margin: 15px;
+}
+
+.list-item {
+  font-weight: bold;
+  padding: 20px 0;
+  cursor: pointer;
+  width: 80%;
+}
+
+.list-item:hover {
+  background-color: white;
+  width: 80%;
+  padding-left: 15px;
+}
+
+
+@media only screen and (max-width: 360px) {
+  .sidebar {
+    width: 110px;
+}
+
+  .box {
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+
+  .list {
+    list-style-type: none;
+    margin: auto;
+  }
+
+  .list-item {
+    padding-right: 2px;
+    cursor: pointer;
+    width: 40%;
+    padding: 5px 0;
+  }
+
+}
