@@ -1,6 +1,6 @@
 ## Introduction
 
-This is the final project for the a [Udacity Front End Development Nanodegree](https://www.udacity.com/google-scholarships). The task was to first build a single page application featuring a map, and the add functionality to the map including highlighted locations, third-party data about those locations and various ways to browse the content.
+This is the final project for the [Udacity Front End Development Nanodegree](https://www.udacity.com/google-scholarships). The task was to first build a single page application featuring a map, and the add functionality to the map including highlighted locations, third-party data about those locations and various ways to browse the content.
 
 ## How to Run the APP
 
