@@ -9,7 +9,7 @@ Clone this repo to a directory of your choosing using git clone
 Using the terminal: cd into the directory
 Using the terminal: `npm install` and once that is finished `npm start`
 The page should automatically load in browser via http://localhost:3000.
-But, App will not display until you edit the App.js file and enter your Client ID, Client Secret, and API Key where indicated.
+But, the App will not display until you edit the App.js file and enter your Client ID, Client Secret, and API Key where indicated.
 
 ## Dependencies
 
