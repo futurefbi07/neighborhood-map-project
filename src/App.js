@@ -19,8 +19,8 @@ class App extends Component {
   getVenues = () => {
    let endPoint =  "https://api.foursquare.com/v2/venues/explore?";
    let parameters = {
-     client_id: "QK2IKMATCGSVS5NCNQKUKGPRW0DDRNEJZOXJAXPS412X2UB3",
-     client_secret: "WYAOT0VKVJTZGLLKXWFLTGHQ3S4TDAFYJPDGGR3YC33OGP43",
+     client_id: "[your Client ID here]",
+     client_secret: "[your Client Secret here]",
       near: 'Banff',
       query: 'lake',
       v: '20182507'
@@ -94,7 +94,7 @@ class App extends Component {
 
 //Load Google Map
   loadMap = () => {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyDVuOsPlSlPkEuLQwOEQ2jX47ftQX7eBUE&callback=initMap");
+    loadScript("https://maps.googleapis.com/maps/api/js?key=[your API Key here]&callback=initMap");
       window.initMap = this.initMap;
         console.log("loading map")
 
