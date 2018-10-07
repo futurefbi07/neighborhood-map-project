@@ -8,8 +8,7 @@ Make sure Node.js is installed <br>
 Clone this repo to a directory of your choosing using git clone <br>
 Using the terminal: cd into the directory<br>
 Using the terminal: `npm install` and once that is finished `npm start`<br>
-The page should automatically load in browser via http://localhost:3000.<br>
-But, the App will not display until you edit the App.js file and enter your Client ID, Client Secret, and API Key where indicated.
+The page should automatically load in browser via http://localhost:3000.<br> But, the App will not display until you edit the App.js file and enter your Client ID, Client Secret, and API Key where indicated.
 
 ## Dependencies
 
